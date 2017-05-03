@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Informatie
+        Deze HTML kan gebruikt worden voor het makkelijk aanmaken van nieuwe Crowdfund-like pagina's.
+        Een persoon met minimale kennis van HTML/CSS, of zelfs zonder kan deze pagina aanpassen.
+
+        Lees commentaar goed, indien er het volgende staat;
+            <!-- [EDIT_ABLE] ......
+        Wil dit zeggen dat de gebruiker het volgende mag aanpassen wat er omschreven staat.
+
+        Indien aanpassingen te moeilijk zijn mag er altijd een ticket gemaakt worden voor het verduidelijken
+        van de documentatie.
+
+        Zodra deze pagina is aangepast kan er een ticket gemaakt worden voor een convertie naar PHP formaat,
+        ik (Ben Teppers) ben instaat om deze verandering te doen; een ticket met mijn naam op is meer dan welkom.
+    -->
+    <meta charset="UTF-8">
+
+    <!-- [EDIT_ABLE] Titel
+        Dit element is de text die boven in je tab-adress komt te staan om aan te tonen hoe de pagina noemt.
+        voorbeelden:
+            <title>Mijn Pagina</title
+            <title>Hogeschool PXL</title>
+    -->
+    <title>Crowdfund sjabloon</title>
+
+    <link rel="stylesheet" href="../css/crowdfundSjabloon.css"/>
+</head>
+<body>
+    <header>
+        <!-- [EDIT_ABLE] aanpassen header-foto
+            ga naar "crawdfundSjabloon.css" en zoek naar de blok
+                header > section {
+                    ...
+                }
+        -->
+        <nav>
+            @include('layouts/includes/front-end-navigation')
+        </nav>
+        <section>
+            <!-- [EDIT_ABLE] Header text-box
+                h1 : dit is de grote transparante blok in het midden van de header
+                     indien je twee regels wilt kan je makkelijk hetvolgende doen;
+                     <h1>regel1<br>regel2</h1>, de <br> / break module zal een nieuwe regel starten.
+                h2 : dit is de regel die onder aan de header komt te staan; deze is ook transparant
+                voorbeeld:
+                    <h1>Titel</h1>
+                    <h3>Subscription</h3>
+
+                    <h1>Crowdfund<br>caravan</h1>
+                    <h3>activisme_be</h3>
+
+                .....
+            -->
+            <h1>H1 ELEMENT</h1>
+            <h3>H3 ELEMENT</h3>
+        </section>
+    </header>
+    <main>
+        <!-- section block voorbeeld1
+
+        -->
+        <section class="informatie">
+            <section>
+                <h1>test</h1>
+                <p>blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...</p>
+            </section>
+            <section>
+                <h1>test</h1>
+                <p>blah blah blah ... blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...</p>
+            </section>
+            <section>
+                <h1>test</h1>
+                <p>blah blah blah ... blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...blah blah blah ...
+                    blah blah blah ...
+                    blah blah blah ...blah blah blah ...
+                </p>
+            </section>
+        </section>
+        <section class="sponsors">
+            <!-- [EDIT_ABLE] toevoegen / aanpassen sponsors
+
+                   hier kun je foto's van sponsors toevoegen, img files krijgen door de CSS een specifieke grootte,
+
+
+                toevoegen van een image doe je alsvolgt;
+                    1) kopieer hetvolgende en plak het onder de andere <img> tags.
+                            <a href="IMAGE_WEB_LINK"><img src="IMAGE_LOCATION" alt="IMAGE_NAME"></a>
+                    2) pas de elementen aan zoals in eht voorbeeld hieronder;
+                            - href="www.website.com"
+                            - src="../images/image.jpg"  : dit kan eenderwelke extentie zijn, zolang het maar een IMAGE is.
+                            - alt="naam van de sponsor"  : in het geval dat een blinde in deze pagina komt krijgt hij dit te horen,
+                                                           ook zal voor iemand waar de foto niet laad deze naam verschijnen.
+
+                indien er een foto bij komt met een andere gewenste afmeting moet je 2 dingen doen;
+                    1) voeg een class toe aan je <img> element;
+                             voorbeeld;
+                                <img src="IMAGE_LOCATION" alt="IMAGE_NAME" class="IMAGE_CLASS"/>
+                    2) ga nu naar "crowdfundSjabloon.css" en zoek naar hetvolgende;
+                        /* [EDIT_ABLE] Aanpassingen van specifieke sponsor images
+                              ....
+                        */
+                    3) volg de stappen die hier in staan.
+            -->
+            <a href="IMAGE_WEB_LINK"><img src="IMAGE_LOCATION" alt="IMAGE_NAME"></a>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h1>Information</h1>
+            <section>
+                <h2>Share</h2>
+                <nav>
+                    <ul>
+                        <li><a href="http://www.facebook.com/share.php?u=http://www.activisme.be/&title=activisme.be">FACEBOOK</a></li>
+                        <li><a href="http://twitter.com/intent/tweet?status=activisme.be+http://www.activisme.be">TWITTER</a></li>
+                        <li><a href="http://www.activisme.be">LINKEDIN</a></li>
+                        <li><a href="https://plus.google.com/share?url=http://www.activisme.be">GOOGLEPLUS</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <h2>Follow</h2>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.facebook.com/ActivismeBE/" target="blank">FB ACTIVISME</a></li>
+                        <li><a href="https://twitter.com/Activisme_be" target="blank">TWITTER ACTIVISME</a></li>
+                        <li><a href="https://www.facebook.com/tom.manhaeghe.game" target="blank">FB TOM MANHAEGHE</a></li>
+                        <li><a href="https://twitter.com/manhaeghe" target="blank">TWITTER TOM MANHAEGHE</a></li>
+                        <li><a href="https://www.flickr.com/photos/activisme/" target="blank">FLICKR</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCVL0CgcRZu8fgCKad5Mi9WA" target="blank">YOUTUBE</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <h2>Links</h2>
+                <nav>
+                    <ul>
+                        <li><a href="http://www.intal.be/" target="blank">INTAL</a></li>
+                        <li><a href="https://www.vrede.be/" target="blank">VREDE.BE</a></li>
+                        <li><a href="https://www.vredesactie.be/" target="blank">VREDESACTIE.BE</a></li>
+                        <li><a href="http://www.hartbovenhard.be/" target="blank">HART BOVEN HARD</a></li>
+                        <li><a href="http://www.solidarityforall.be" target="blank">SOLIDARITY FOR ALL</a></li>
+                        <li><a href="https://www.amnesty-international.be" target="blank">AMNESTY INTERNATIONAL</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+        <p><strong>Copyright &copy; activisme_be 2016</strong></p>
+    </footer>
+</body>
+</html>
