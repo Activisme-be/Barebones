@@ -1,0 +1,320 @@
+@import 'variables';
+
+html {
+  background-image: url('../images/FooterBackground.jpg');
+  background-size: cover;
+  min-width: 1200px;
+}
+
+//
+// Bij 'background-image:' kun je de achtergrond veranderen van de header,
+// Dit is de sectie met de <h1> en <h3> element
+//
+// voorbeeld:
+//    background-image: url(''../images/foto.jpg');
+//
+header > section {
+  background-image: url('../images/header-Background.jpg');
+  background-size: cover;
+  display: block;
+  text-align: center;
+
+  > h1 { // header > section > h1
+    background-color: rgba(0, 0, 0, .30);
+    border: .15em solid rgba(2, 0, 0, .40);
+    color: $color-white;
+    display: inline-block;
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: 1.3em;
+    padding: 1.2em 2em;
+  }
+
+  > h3 { // header > section > h3
+    background-color: rgba(0, 0, 0, .45);
+    color: $color-white;
+    display: block;
+    font-size: 1.5em;
+    margin: 0;
+    padding: .5em .8em;
+  }
+}
+
+header > nav {
+  color: $color-white;
+  text-align: center;
+
+  > ul { // header > nav > ul
+    display: inline-block;
+    margin: 0;
+    padding: 1.2em 0;
+
+    > li { // header > nav > ul > li
+      display: inline-block;
+      margin: 0 2em;
+
+      > a { // header > nav > ul > li > a
+        color: $color-driftwood;
+        font-size: 1.5em;
+        font-style: oblique;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover { // header > nav > ul > li > a:hover
+          background-image: url('../images/menu-hover.png');
+          border-radius: .8em;
+          color: $color-gold;
+          padding: .2em 1em;
+          transition: .9s;
+        }
+
+        &:visited { // header > nav > ul > li > a:visited
+          color: $color-driftwood;
+        }
+      }
+    }
+  }
+}
+
+// scss-lint:disable  MergeableSelector
+header > section {
+  background-image: url('../images/caravanCrowdfund.jpg');
+  background-size: cover;
+  display: inline-block;
+  height: 65em;
+  width: 100%;
+}
+
+// Crowdfund 24-04-2017 aanpassing ticket #43
+header > section > section {
+  background-color: rgba(0, 0, 0, .30);
+  border: .15em solid rgba(2, 0, 0, .40);
+  color: $color-white;
+  display: inline-block;
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  margin-top: 5em;
+  padding: 1.2em 2em;
+}
+
+header > section > section > h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+header > section > section > h2 {
+  font-size: 1em;
+}
+// end Crowdfund 24-04-2017 aanpassing ticket #43
+
+header > section > h1 {
+  margin-top: 6.5em;
+}
+
+header > section > h3 {
+  margin-top: 11.4em;
+}
+
+main > section {
+  background-image: url('../images/nieuws-background.jpg');
+  background-size: cover;
+  border-bottom: solid $color-tundora .5em;
+  border-left: solid $color-mine-shaft .5em;
+  border-right: solid $color-mine-shaft .5em;
+  border-top: solid $color-tundora .5em;
+  display: inline-block;
+  margin: .5%;
+  width: 99%;
+}
+
+main > .informatie > section {
+  display: inline-block;
+  margin-left: 10%;
+  max-width: 80%;
+  text-align: center;
+  width: 80%;
+}
+
+main > .informatie > section:first-child {
+  padding-top: 2em;
+}
+
+main > .informatie > section:last-child {
+  display: inline-block;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+main > .informatie > section > h1 {
+  color: $color-black;
+  display: inline-block;
+  font-size: 3.5em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+main > .informatie > section > p {
+  border-bottom: solid .2em $color-black;
+  display: inline-block;
+  font-size: 1.3em;
+  padding: 0 .8em;
+  text-align: center;
+  width: 90%;
+}
+
+main > .informatie > section > p {
+  border: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+main > .informatie > section > p:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+main > .sponsors {
+  display: inline-block;
+  margin: .5%;
+  padding: 0;
+  text-align: center;
+  width: 99%;
+}
+
+main > .sponsors > h1 {
+  color: $color-black;
+  display: inline-block;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+main > .sponsors > div {
+  padding-bottom: 2em;
+}
+
+main > .sponsors > div > img {
+  height: 20em;
+  margin-bottom: .5%;
+  margin-left: .5%;
+  margin-right: .5%;
+  width: 20em;
+}
+
+// [EDIT_ABLE] Aanpassingen van specifieke sponsor images
+// ---
+// we nemen hier aan dat de class de naam 'naam' gekregen heeft.
+// het aanpassen van de foto gaat alsvolgt;
+//
+// 1) kopiëer de volgende code-blok en plak deze vlak onder de commentaar-blok.
+// main > .sponsors > div > class {
+//   height: 20em;
+//   width: 40em;
+//   margin-left: .5%;
+//   margin-right: .5%;
+//   margin-bottom: .5%;
+// }
+//
+// 2) verander class naar de naam van je image_class, men doet dit door een punt voor de class_naam te zetten.
+// ----
+// voorbeeld;
+//    main > .sponsors > div > .naam {
+//      ...
+//    }
+//
+// 3) pas height en width aan naar gewenste waarde
+// ----
+// voorbeeld;
+//   main > .sponsors > div > .naam {
+//      height: 50em;
+//      width: 35em;
+//      ...
+//  }
+//
+// 4) dit is alles voor het toevoegen / aanpassen van een sponsor's foto.
+
+// Crowdfund 24-04-2017 aanpassing ticket #42
+main > .sponsors > div > .block-vrede {
+  height: 20em;
+  margin-bottom: .5%;
+  margin-left: .5%;
+  margin-right: .5%;
+  width: 40em;
+}
+// end Crowdfund 24-04-2017 aanpassing ticket #42
+
+footer {
+  color: $color-white;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+
+  > p { // footer > p
+    color: $color-white;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  > section { // footer > section
+    text-align: center;
+  }
+}
+
+footer > section > h1 {
+  color: $color-driftwood;
+  font-size: 3.5em;
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+  text-align: center;
+  vertical-align: text-top;
+  width: 100%;
+}
+
+// scss-lint:disable DuplicateProperty
+footer > section > section {
+  display: inline-block;
+  height: 175.81px;
+  height: 15em;
+  padding: 0 1.2em;
+  text-align: center;
+  vertical-align: top;
+  width: 20em;
+}
+
+footer > section > section > h2 {
+  border-bottom: .05em solid $color-white;
+  color: $color-driftwood;
+  font-size: 2em;
+  text-align: center;
+}
+
+footer > section > section > nav > ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer > section > section > nav > li {
+  padding-bottom: 1.2em;
+}
+
+footer > section > section > nav > ul > li > a {
+  color: $color-driftwood;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer > section > section > nav > ul > li > a:hover {
+  background: url('../images/menu-hover.png') center;
+  background-repeat: no-repeat;
+  color: $color-apricot-white;
+  padding: 1em;
+  transition: all .9s;
+}
